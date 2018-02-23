@@ -1,0 +1,17 @@
+extends ../../layouts/app
+
+block content
+    .container-fluid
+        h1 Hi #{user.name}
+        h3
+            small Email:
+            |#{user.email}
+        p #{user.googleId ? 'You are logged in with google+': 'You are logged in loccaly'}
+        div.btn-group
+            a.btn.btn-primary(href="/") Home
+            a.btn.btn-info(href="/profileSettings") Profile Settings
+            a.btn.btn-warning(href="/auth/") Auth
+        div.mt-3
+            a.btn.btn-success(href="/auth/sign-out/") Sign out
+        p.mt-3
+            | 1. On click auth button will stay in this page,because you are signed in,first you need to sign out.

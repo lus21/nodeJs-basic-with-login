@@ -1,0 +1,24 @@
+extends ../../layouts/app
+
+block styles
+    link(href='/css/example.css', rel='stylesheet')
+
+block content
+    .container
+        div
+            img(src="/images/logo.png")
+        h1.mt-3 Example Page
+        div.btn-group.mt-3
+            a.btn.btn-warning(href="/auth") Auth
+            a.btn.btn-primary(href="/profile") Profile
+            a.btn.btn-info(href="/profileSettings") Profile Settings
+        p.mt-3
+            | 1. Auth page shows sign in and sign up forms,google+ sign in button,if you are signed in onclick auth button will stay in this page
+            br
+            | 2.If you are signed in,on click profile button will go profile page,if no auth page
+            br
+            | 3.If you are signed in,on click profileSettings button will go profileSettings page,if no will stay in this one
+
+block scripts
+    script(src="/js/example.js")
+
